@@ -10,5 +10,7 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+#Modify luci-app-store : Makefile 'package/feeds/kenzok/luci-app-bypass/Makefile' has a dependency on 'luci-lib-ipkg', which does not exist
+sed -i 's/luci-lib-ipkg/luci-base/g' package/feeds/kenzok/luci-app-store/Makefile
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
